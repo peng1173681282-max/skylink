@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-primary: #10b981; /* Emerald 500 */
+  --color-brand-dark: #064e3b; /* Emerald 900 */
+  --color-surface: #f8fafc; /* Slate 50 */
+}
+
+@layer base {
+  body {
+    @apply bg-slate-100 text-slate-900 font-sans antialiased flex justify-center min-h-screen;
+  }
+
+  #root {
+    @apply w-full max-w-md bg-white min-h-screen shadow-2xl relative overflow-x-hidden flex flex-col;
+  }
+}
+
+@layer components {
+  .bottom-nav-item {
+    @apply flex flex-col items-center justify-center gap-1 text-slate-400 transition-colors py-2;
+  }
+  
+  .bottom-nav-item.active {
+    @apply text-emerald-600;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-primary hover:bg-emerald-600 text-white font-medium px-6 py-3 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-secondary {
+    @apply bg-white border border-slate-200 hover:border-emerald-200 hover:bg-emerald-50 text-slate-700 font-medium px-6 py-3 rounded-xl transition-all duration-200 active:scale-95;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl border border-slate-100 shadow-sm p-6;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-primary focus:ring-2 focus:ring-emerald-500/20 outline-none transition-all;
+  }
+}
