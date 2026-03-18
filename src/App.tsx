@@ -17,8 +17,7 @@ import {
   Settings,
   TrendingUp,
   AlertCircle,
-  ArrowDownCircle,
-  ArrowUpCircle,
+  History,
   Calendar
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
